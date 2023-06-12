@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플르부아</title>
+  <!-- Link Swiper's CSS  -->
+  <!-- .best -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Link pleuvoir CSS  -->
+  <link href="css/pleuvoir.css" rel="stylesheet" />
+  <!-- 1. jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- 2. Swiper JS  -->
+  <!-- .best -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+    /* .banner_slide script*/
+    window.onload = function () {
+      let bs = document.querySelector('.banner_slide');
+      let bsInner = document.querySelectorAll('p');
+      let i = 0;
+
+      function bsSlide() {
+        i++;
+        if (i >= bsInner.length) {
+          i = 0;
+        }
+        bsInner.forEach(function (index) {
+          index.classList.remove('on')
+        })
+
+        bsInner[i].classList.add('on')
+      }
+      bsSlide()
+      setInterval(bsSlide, 2000);
+
+      /* .bar script */
+      $(function () {
+        let menu = $('.depth01');
+        menu.mouseenter(function () {
+          console.log($(this).position().left)
+
+          let moveLeft = $(this).position().left;
+          $('.bar').stop().animate({
+            'left': moveLeft
+          })
+        })
+      })
+
+      /* .new script */
+      var swiper = new Swiper(".new", {
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        loop: false,
+        loopAdditionalSlides: 1,
+      });
+
+      /* .best script*/
+      var swiper = new Swiper(".best", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+      });
+    }
+
+
+
+
+  </script>
+
+</head>
+
+<body>
+  <div class="banner_slide">
+    <p class="on">누적 주문금액 혜택 NOTICE 참고</p>
+    <p>Free Shipping Over KRW 50,000</p>
+    <p>카카오톡 채널 추가시 5% 할인</p>
+  </div><!-- .banner_slide end -->
+
+  <!-- header 🟢 -->
+  <header>
+    <div class="inner">
+      <div class="hd">
+        <h1>
+          <a href="#"><img src="img/logo.png" alt="로고" /></a>
+        </h1>
+      </div><!-- .hd end -->
+      <nav class="pc">
+        <ul class="left_gnb">
+          <li class="depth01">
+            <a href="#">Shop</a>
+            <ul class="depth02">
+              <li><a href="#">All</a></li>
+              <li><a href="#">New</a></li>
+              <li><a href="#">Best Seller</a></li>
+              <li><a href="#">Gift Set</a></li>
+              <li><a href="#">Parfum</a></li>
+              <li><a href="#">Body Care</a></li>
+              <li><a href="#">Hand Care</a></li>
+              <li><a href="#">Lip Care</a></li>
+            </ul><!-- .depth02 end -->
+            <div class="bar"><span>메뉴바</span></div>
+          </li><!-- .depth01 end -->
+
+          <li class="depth01">
+            <a href="#">About</a>
+            <ul class="depth02">
+              <li><a href="#">Brand Story</a></li>
+              <li><a href="#">Stockists</a></li>
+              <li><a href="#">Customer Care</a></li>
+            </ul><!-- .depth02 end -->
+          </li><!-- .depth01 end -->
+        </ul><!-- .left_gnb end -->
+
+        <ul class="right_gnb">
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Account</a></li>
+          <li><a href="#">Cart</a></li>
+        </ul><!-- right_gnb end -->
+      </nav><!-- .pc end -->
+
+      <div class="mobile">
+        <div class="mobile_left">
+          <span class="mobile open">
+            <a href="#"><img src="img/mobile/line.png" alt="메뉴보기" /></a>
+          </span><!-- .mobile open end -->
+        </div><!-- mobile_left -->
+        <div class="mobile_right">
+          <span class="mobile search">
+            <a href="#"><img src="img/mobile/search.png" alt="검색" /></a>
+          </span><!-- .mobile search end -->
+          <span class="mobile cart">
+            <a href="#"><img src="img/mobile/cart.png" alt="카트" /></a>
+          </span><!-- .mobile cart end -->
+        </div><!-- .mobile_right end -->
+      </div><!-- .mobile end-->
+    </div><!-- .inner end -->
+    <div class="bg"></div>
+  </header>
+
+  <!-- main 🟢 -->
+  <section class="main_visual">
+    <figure>
+      <img src="img/main/main img.jpg" alt="메인이미지" />
+    </figure>
+    <div class="mini">
+      <div>
+        <img src="img/main/left img.jpg" alt="왼쪽이미지" />
+      </div>
+      <div>
+        <img src="img/main/center img.jpg" alt="센터이미지" />
+      </div>
+      <div>
+        <img src="img/main/right img.jpg" alt="오른쪽이미지" />
+      </div>
+    </div><!-- .mini end -->
+  </section><!-- .main_visual end -->
+
+  <!-- product 🟢 -->
+  <section class="product">
+    <div class="inner">
+      <!-- .new start -->
+      <div class="new_arrival">
+        <h3>New Arrival</h3>
+        <div class="swiper new">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="new_item">
+                <figure>
+                  <img src="img/product/new.jpg" alt="" />
+                </figure>
+              </div><!-- .new_item end -->
+            </div><!-- .swiper-slide end -->
+            <div class="swiper-slide">
+              <div class="new_item">
+                <figure>
+                  <img src="img/product/new1.jpg" alt="" />
+                </figure>
+              </div><!-- .new_item end -->
+            </div><!-- .swiper-slide end -->
+            <div class="swiper-slide">
+              <div class="new_item">
+                <figure>
+                  <img src="img/product/new2.jpg" alt="" />
+                </figure>
+              </div><!-- .new_item end -->
+            </div><!-- .swiper-slide end -->
+          </div><!-- .swiper-wrapper end -->
+        </div><!-- .swiper new end -->
+      </div><!-- .new_arrival end-->
+      <!-- .best start -->
+      <div class="best_seller">
+        <h3>Best Seller</h3>
+        <div class="bar">
+          <div class="swiper best">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs1.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs2.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs3.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs4.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs1-1.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs2-1.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs3-1.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <div class="best_item">
+                  <figure>
+                    <img src="img/product/bs4-1.jpg" alt="" />
+                  </figure>
+                  <div>
+                    <span>Hinoki Leather Hand Cream</span>
+                    <p>히노끼 레더 핸드크림</p>
+                    <strong>KRW 12,800</strong>
+                  </div>
+                </div><!-- .best_item end -->
+              </div><!-- .swiper-slide end -->
+            </div><!-- .swiper-wrapper end -->
+          </div><!-- .swiper best end -->
+          <div class="swiper-pagination"></div>
+        </div><!-- .bar end -->
+      </div><!-- .best_seller end -->
+    </div><!-- .list end -->
+    </div><!-- .inner end -->
+  </section><!-- .product end -->
+
+  <!-- scent 🟢 -->
+  <section class="scent">
+    <h3>scent</h3>
+    <div class="list">
+      <div class="item">
+        <figure>
+          <img src="img/scent/floral musk.jpg" alt="" />
+        </figure>
+        <div>
+          <p>floral musk</p>
+          <span>Shop Now</span>
+        </div>
+      </div><!-- .item end -->
+      <div class="item">
+        <figure>
+          <img src="img/scent/hinoki Leather.jpg" alt="" />
+        </figure>
+        <div>
+          <p>hinoki Leather</p>
+          <span>Shop Now</span>
+        </div>
+      </div><!-- .item end -->
+      <div class="item">
+        <figure>
+          <img src="img/scent/morning soil.jpg" alt="" />
+        </figure>
+        <div>
+          <p>morning soil</p>
+          <span>Shop Now</span>
+        </div>
+      </div><!-- .item end -->
+  </section><!-- .scent end-->
+
+  <section class="care">
+    <h3>Care</h3>
+    <div class="inner">
+      <div class="item">
+        <div class="text">
+          <div>
+            <h4>Body Care</h4>
+            <p>Component</p>
+            <span>Cramide
+              Hyaluronic acid
+              BPS complexTM
+              Peptide
+              Hamamelis virginiana(witch hazel) leaf extract</span>
+            <p>Free Concept</p>
+            <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
+              Skin irritation test completed</span>
+          </div>
+        </div><!-- .text end -->
+        <div>
+          <figure>
+            <img src="img/care/body.png" alt="" />
+          </figure>
+        </div>
+      </div><!-- .item1 end -->
+      <div class="item">
+        <div class="text">
+          <div>
+            <h4>Body Care</h4>
+            <p>Component</p>
+            <span>Cramide
+              Hyaluronic acid
+              BPS complexTM
+              Peptide
+              Hamamelis virginiana(witch hazel) leaf extract</span>
+            <p>Free Concept</p>
+            <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
+              Skin irritation test completed</span>
+          </div>
+        </div><!-- .text end -->
+        <div>
+          <figure>
+            <img src="img/care/hand.png" alt="" />
+          </figure>
+        </div>
+      </div><!-- .item1 end -->
+      <div class="item">
+        <div class="text">
+          <div>
+            <h4>Lip Care</h4>
+            <p>Component</p>
+            <span>Component
+              Cramide
+              Hyaluronic acid
+              BPS complexTM
+              Peptide
+              Hamamelis virginiana(witch hazel) leaf extract</span>
+            <p>Free Concept</p>
+            <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
+              Skin irritation test completed</span>
+          </div><!-- .text end -->
+        </div>
+        <div>
+          <figure>
+            <img src="img/care/lip.png" alt="" />
+          </figure>
+        </div>
+      </div><!-- .item1 end -->
+    </div><!-- .inner end -->
+  </section><!-- .Care end -->
+</body>
+<footer>
+  <div class="top">
+    <div>
+      <div>
+        <p>Customer Care</p>
+        <a href="#">
+          <p>Instagram</p>
+        </a>
+        <p>2022 By sasa Seoul</p>
+      </div>
+      <figure>
+        <img src="img/문의.png" alt="" />
+      </figure>
+    </div>
+  </div><!-- .top end-->
+  <div class="bottom">
+    <p>(주)플르부아 </br>
+      대표자 이주형 | 사업자등록번호 8448702831 | 통신판매업신고번호 2023-서울성동-0163 | 서울시 성동구 독서당로 166 한남더리버오피스텔 409호 | 고객센터 010-8851-9232 |
+      문의 haeshin01@naver.com</p>
+    <p>ⓒ 2022 Pleuvoir All Rights Reserved</p>
+  </div><!-- .bottom end -->
+</footer>
+
+</html>
