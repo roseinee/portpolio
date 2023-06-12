@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daytrip</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="css/daytrip.css" rel="stylesheet" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+    window.onload = function () {
+
+      $(function(){
+        let menu = $('.gnb li');
+        menu.mouseenter(function(){
+          console.log($(this).position().left)
+
+          let moveLeft = $(this).position().left;
+          $('.bar').stop().animate({
+            'left' : moveLeft
+          })
+          let thisWidth = $(this).outerWidth();
+          bar.css({
+            'width' : thisWidth,
+          })
+        })
+      })
+
+      var swiper = new Swiper(".editor_swiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      });
+
+      var swiper = new Swiper(".curation_swiper", {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      });
+
+      var swiper = new Swiper(".daylog_swiper", {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+      });
+
+      var swiper = new Swiper(".local_swiper", {
+        slidesPerView: 3.3,
+        spaceBetween: 10,
+      });
+
+      var swiper = new Swiper(".fv_local_swiper", {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+      });
+
+      var swiper = new Swiper(".trip_swiper", {
+        slidesPerView: 3.3,
+        spaceBetween: 10,
+      });
+
+      var swiper = new Swiper(".fv_trip_swiper", {
+        slidesPerView: 2.5,
+        spaceBetween: 20,
+      });
+      
+    }
+  </script>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="inner">
+      <h1>
+        <a href="#">
+          <img src="img/logo.jpg" alt="로고" />
+        </a>
+      </h1>
+      <nav class="menu">
+        <a href="#">
+          <img src="img/global.png" alt="나라" />
+        </a>
+        <a href="#">
+          <img src="img/setting.png" alt="조건" />
+        </a>
+        <a href="#">
+          <img src="img/bell.png" alt="알람" />
+        </a>
+      </nav><!-- .menu end -->
+    </div><!-- .inner end -->
+    <!-- gnb -->
+    <section class="gnb">
+      <div class="inner">
+        <li><a href="#">추천</a></li>
+        <li><a href="#">큐레이션</a></li>
+        <li><a href="#">데이로그</a></li>
+      </div><!-- .inner end -->
+      <div class="bar"><span>메뉴바</span></div>
+    </section><!-- .gnb end -->
+  </header>
+
+
+  <main>
+    <!-- editor -->
+    <section class="editor">
+      <div class="inner">
+        <div class="title">
+          <h3>에디터 추천</h3>
+          <a href="#">전체보기</a>
+        </div><!-- .title end -->
+        <div class="editor_slide_list">
+          <div class="swiper editor_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/아이엠베이글.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <h4>아이엠베이글 용산점</h4>
+                  <p>건강과 휴식의 제공처에서
+                    맞이하는 활기찬 아침</p>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/뮤지엄한미.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <h4>뮤지엄한미</h4>
+                  <p>작년 말에 새롭게 오픈한
+                    국내 최초 사진 전문 미술관</p>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/코니.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <h4>코니</h4>
+                  <p>디저트 러버 설레는 달콤 산책</p>
+                </div>
+              </div><!-- .swiper-slide end -->
+            </div><!-- .swiper-wrapper end -->
+          </div><!-- .editor_swiper end -->
+        </div><!-- .editor_slide_list end -->
+      </div><!-- .inner end -->
+    </section><!-- .editor end -->
+
+    <!-- curation -->
+    <section class="curation">
+      <div class="inner">
+        <div class="title">
+          <h3>큐레이션</h3>
+          <a href="#">전체보기</a>
+        </div><!-- .title end -->
+        <span>일상을 특별하게 만들어줄 공간 가이드</span>
+        <div class="curation_slide_list">
+          <div class="swiper curation_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/충남여행지.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <h4>DayTrip</h4>
+                  <p>너무 일찍 피어버린 겹벚꽃,
+                    지금 가기 딱 좋은 충남 여행지</p>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/합정 상수.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <h4>DayTrip</h4>
+                  <p>라일락 구경하기 좋은
+                    합정 상수 하루 코스 21곳</p>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/뤁스퀘어.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <h4>DayTrip</h4>
+                  <p>가족과 방문하기 좋은
+                    충청도 자연 문화 공간 39곳
+                  </p>
+                </div>
+              </div><!-- .swiper-slide end -->
+            </div><!-- .swiper-wrapper end -->
+          </div><!-- .curation_swiper end -->
+        </div><!-- .curation_slide_list end -->
+      </div><!-- .inner end -->
+    </section><!-- .curation end -->
+
+    <!-- daylog -->
+    <section class="daylog">
+      <div class="inner">
+        <div class="title">
+          <h3>데이로그</h3>
+          <a href="#">전체보기</a>
+        </div><!-- .title end -->
+        <span>지금 인기 있는 공간</span>
+        <div class="daylog_slide_list">
+          <div class="swiper daylog_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/1유로 프로젝트.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>1유로 프로젝트 코끼리</p>
+                  <span>서울, 대한민국 •카페</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/고롱.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>고롱</p>
+                  <span>서울, 대한민국 •카페</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/살라댕엠버시.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>살랑댕엠버시</p>
+                  <span>서울, 대한민국 •카페</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+            </div><!-- .swiper-wrapper end -->
+          </div><!-- .daylog_swiper end -->
+        </div><!-- .daylog_slide_list end -->
+      </div><!-- .inner end -->
+    </section><!-- .daylog end -->
+
+    <!-- local -->
+    <section class="local">
+      <div class="inner">
+        <div class="title">
+          <h3>인기 지역</h3>
+          <a href="#">전체보기</a>
+        </div><!-- .title end -->
+        <div class="local_slide_list">
+          <div class="swiper local_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/local1.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>도산공원</p>
+                </div>
+              </div><!-- .swiper-slide -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/local2.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>용산역</p>
+                </div>
+              </div><!-- .swiper-slide -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/local3.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>합정동</p>
+                </div>
+              </div><!-- .swiper-slide -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/local4.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>제주도</p>
+                </div>
+              </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper end -->
+          </div><!-- .local_swiper end -->
+        </div><!-- .local_slide_list end -->
+      </div><!-- .inner end -->
+    </section><!-- .local end -->
+
+    <!-- fv_local -->
+    <section class="fv_local">
+      <div class="inner">
+        <div class="title">
+          <h3>내 관심 지역</h3>
+          <a href="#">전체보기</a>
+        </div><!-- .title end -->
+        <span>내 관심 지역의 최신 업데이트</span>
+        <div class="fv_local_slide_list">
+          <div class="swiper fv_local_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/fv1.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>국제 갤러리</p>
+                  <span>서울, 종로구</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/fv2.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>정독도서관</p>
+                  <span>서울, 종로구</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/fv3.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>스태픽스</p>
+                  <span>서울, 종로구</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/fv4.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>뤁스퀘어</p>
+                  <span>서울, 종로구</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+            </div><!-- .swiper-wrapper end -->
+          </div><!-- .fv_local_swiper end -->
+        </div><!-- .fv_local_slide_list end -->
+      </div><!-- .inner end -->
+    </section><!-- .fv_local end -->
+
+    <!-- trip -->
+    <section class="trip">
+      <div class="inner">
+        <div class="title">
+          <h3>인기 국가</h3>
+          <a href="#">전체보기</a>
+        </div><!-- .title end -->
+        <div class="trip_slide_list">
+          <div class="swiper trip_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/trip1.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>미국</p>
+                </div>
+              </div><!-- .swiper-slide -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/trip2.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>태국</p>
+                </div>
+              </div><!-- .swiper-slide -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/trip3.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>프랑스</p>
+                </div>
+              </div><!-- .swiper-slide -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/trip4.png" alt="" />
+                  </figure>
+                </a>
+                <div>
+                  <p>일본</p>
+                </div>
+              </div><!-- .swiper-slide -->
+            </div><!-- .swiper-wrapper end -->
+          </div><!-- .trip_swiper end -->
+        </div><!-- .trip_slide_list end -->
+      </div><!-- .inner end -->
+    </section><!-- .trip end -->
+
+    <!-- fv_trip -->
+    <section class="fv_trip">
+      <div class="inner">
+        <div class="title">
+          <h3>해외여행</h3>
+          <a href="#">전체보기</a>
+        </div><!-- .title end -->
+        <span>평범한 여행 가이드에는 없는 로컬 명소</span>
+        <div class="fv_trip_slide_list">
+          <div class="swiper fv_trip_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/fv_trip1.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>Wanderers</p>
+                  <span>교토시, 일본</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/fv_trip2.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>Herringbone</p>
+                  <span>방콕, Khet Watthana</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+              <div class="swiper-slide">
+                <a href="#">
+                  <figure>
+                    <img src="img/fv_trip3.png" alt="" />
+                  </figure>
+                </a>
+                <h4>DayTrip</h4>
+                <div>
+                  <p>테우치소바 야부킨</p>
+                  <span>후쿠오카현, 일본</span>
+                </div>
+              </div><!-- .swiper-slide end -->
+            </div><!-- .swiper-slide end -->
+          </div><!-- .swiper-wrapper end -->
+        </div><!-- .fv_trip_swiper end -->
+      </div><!-- .fv_trip_slide_list end -->
+      </div><!-- .inner end -->
+    </section><!-- .fv_trip end -->
+
+    <section class="menu_bar">
+      <div class="inner">
+        <ul>
+          <li>
+            <a href="#"><img src="img/홈.png" alt="" /> </a>
+          </li>
+          <li>
+            <a href="#"><img src="img/지도.png" alt="" /> </a>
+          </li>
+          <li>
+            <a href="#"><img src="img/원.png" alt="" /> </a>
+          </li>
+          <li>
+            <a href="#"><img src="img/저장.png" alt="" /> </a>
+          </li>
+          <li>
+            <a href="#"><img src="img/프로필.png" alt="" /> </a>
+          </li>
+        </ul>
+      </div><!-- .inner end -->
+    </section><!-- .menu_bar end -->
+  </main>
+</body>
+
+</html>
