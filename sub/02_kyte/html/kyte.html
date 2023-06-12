@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kyte</title>
+    <link href="css/kyte.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        window.onload = function () {
+            let img01 = 'img/mainimg02.jpg';
+            let img02 = 'img/mainimg03.jpg';
+            let img03 = 'img/mainimg04.jpg';
+            let img04 = 'img/mainimg05.jpg';
+            let img05 = 'img/mainimg06.jpg';
+            let img06 = 'img/mainimg07.jpg';
+            let img07 = 'img/mainimg08.jpg';
+            let img08 = 'img/mainimg09.jpg';
+            let img09 = 'img/mainimg10.jpg';
+            let img10 = 'img/mainimg11.jpg';
+            let img11 = 'img/mainimg12.jpg';
+            let img12 = 'img/mainimg13.jpg';
+            let img13 = 'img/mainimg14.jpg';
+            let img14 = 'img/mainimg15.jpg';
+            let img15 = 'img/mainimg01.jpg';
+            let imgList = [img01, img02, img03, img04, img05, img06, img07, img08,
+                img09, img10, img11, img12, img13, img14, img15];
+            let numList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+            let main = document.getElementById('main_visual');
+
+            let mainImg = main.getElementsByTagName('img')[0];
+            let mainprevBtn = main.getElementsByClassName('prev')[0];
+            let mainNextBtn = main.getElementsByClassName('next')[0];
+            let mainNum = main.getElementsByClassName('num1')[0];
+
+            let i = 0;
+
+            mainNextBtn.onclick = function () {
+                i++;
+                if (i >= imgList.length) {
+                    i = imgList.length - 1
+                }
+                console.log(i)
+                mainImg.src = imgList[i];
+                mainNum.innerText = numList[i];
+                mainNum.style.color = 'rgb(255, 255, 255)';
+            }
+            mainprevBtn.onclick = function () {
+                console.log(i)
+                i--;
+                if (i <= 0) {
+                    i = 0;
+                }
+                mainImg.src = imgList[i]
+                mainNum.innerText = numList[i]
+            }
+            var swiper = new Swiper(".bestitem", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                slidesPerView: 2,
+                spaceBetween: 30,
+            });
+
+
+            var swiper = new Swiper(".themeItem", {
+                navigation: {
+                    nextEl: ".theme-next",
+                    prevEl: ".theme-prev",
+                },
+                slidesPerView: 2,
+                spaceBetween: 0,
+            });
+
+
+        }//window.onload end
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#">
+                    <img src="img/kyte logo.png" alt="kyte로고" />
+                </a>
+            </h1>
+            <div class="menu_icon">
+                <img src="img/person.png" alt="사람" />
+            </div><!-- .menu_icon end -->
+        </div><!-- .inner end -->
+    </header>
+
+    <main>
+
+        <div id="main_visual">
+            <figure>
+                <img src="img/mainimg01.jpg" alt="" />
+            </figure>
+            <div class="btn">
+                <button class="prev">
+                    <img src="img/Vector l.png" alt="" />
+                </button><!-- .prev end -->
+                <button class="next">
+                    <img src="img/Vector r.png" alt="" />
+                </button><!-- .next end -->
+                <div class="numbtn">
+                    <div class="numlist">
+                        <div class="num">
+                            <span class="num1">1</span>
+                            <span>/15</span>
+                        </div><!-- .num end -->
+                        <img src="img/menu.png" alt="" />
+                    </div><!-- .numlist end -->
+                </div><!-- .numbtn end -->
+            </div><!-- .btn end -->
+        </div><!-- #main_visual end -->
+        <div class="inner">
+            <section class="all">
+                <div class="board">
+                    <div class="list">
+                        <div class="item">
+                            <figure>
+                                <img src="img/board1.png" alt="" />
+                                <div>
+                                    <p>혜택 모음</p>
+                                </div>
+                            </figure>
+                        </div><!-- .item end -->
+                        <div class="item">
+                            <figure>
+                                <img src="img/board2.png" alt="" />
+                                <div>
+                                    <p>서울 힐링</p>
+                                </div>
+                            </figure>
+                        </div><!-- .item end -->
+                        <div class="item">
+                            <figure>
+                                <img src="img/board3.png" alt="" />
+                                <div>
+                                    <p>제주 쉬영갑서</p>
+                                </div>
+                            </figure>
+                        </div><!-- .item end -->
+                        <div class="item">
+                            <figure>
+                                <img src="img/board4.png" alt="" />
+                                <div>
+                                    <p>웰니스 강원</p>
+                                </div>
+                            </figure>
+                        </div><!-- .item end -->
+                    </div><!-- .list end -->
+                </div><!-- .board end -->
+
+                <section class="best">
+                    <div class="list">
+                        <div>
+                            <p>카이트에서 추천해요</p>
+                            <h4>모두의 취향저격 BEST</h4>
+                        </div>
+                        <div class="swiper bestitem">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/best1.jpg" alt="" />
+                                    </figure>
+                                </div><!-- .swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/best2.jpg" alt="" />
+                                    </figure>
+                                </div><!-- .swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/best3.jpg" alt="" />
+                                    </figure>
+                                </div><!-- .swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/best4.jpg" alt="" />
+                                    </figure>
+                                </div><!-- .swiper-slide end -->
+                            </div><!-- .swiper-wrapper end -->
+                        </div><!-- .swiper bestitem end -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div><!-- .list end -->
+                </section><!-- .best end -->
+                <section class="hotel">
+                    <div>
+                        <p>고궁 야간 개장</p>
+                        <h4>서울 궁세권 호텔</h4>
+                    </div>
+                    <span>서울</span>
+                    <div class="item">
+                        <figure>
+                            <img src="img/hotel1.jpg" alt="" />
+                        </figure>
+                        <img src="img/save.png" alt="" />
+                        <div>
+                            <h4>나인트리 프리미어 호텔 명동 II</h4>
+                            <p><img src="img/map.png" alt="" />서울 중구<span>|</span>한국</p>
+                            <p><img src="img/star.png" alt="" /><span>9.0</span><span>(1,081)</span></p>
+                            <strong>232,264원</strong>
+                        </div>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/hotel2.png" alt="" />
+                        </figure>
+                        <img src="img/save.png" alt="" />
+                        <div>
+                            <h4>신라스테이 서대문</h4>
+                            <p><img src="img/map.png" alt="" />서대문구<span>|</span>한국</p>
+                            <p><img src="img/star.png" alt="" /><span>8.6</span><span>(521)</span></p>
+                            <strong>187,000원</strong>
+                        </div>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/hotel3.png" alt="" />
+                        </figure>
+                        <img src="img/save.png" alt="" />
+                        <div>
+                            <h4>코리아나 호텔</h4>
+                            <p><img src="img/map.png" alt="" />서울 중구<span>|</span>한국</p>
+                            <p><img src="img/star.png" alt="" /><span>9.1</span><span>(531)</span></p>
+                            <strong>193,829원</strong>
+                        </div>
+                    </div><!-- .item end -->
+                    <p>2023. 4. 21 금 - 4. 22 토 기준 최저요금</p>
+                </section><!-- .hotel end -->
+
+                <sectiona class="theme">
+                    <div class="list">
+                        <div>
+                            <p>취향을 발견해보세요</p>
+                            <h4>카이트 추천 #테마별 호캉스</h4>
+                        </div>
+                        <div class="swiper themeItem">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/theme1.png" alt="" />
+                                    </figure>
+                                    <div>
+                                        <p>'서울의 밤' 즐기기 좋은 루프탑 호텔 TOP5</p>
+                                        <span>스페셜</span>
+                                    </div>
+                                </div><!-- .swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/theme2.png" alt="" />
+                                    </figure>
+                                    <p>여기가 거기라고? 드라마·예능 속 국내 호텔 5</p>
+                                    <span>스페셜</span>
+                                </div><!-- .swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/theme3.png" alt="" />
+                                    </figure>
+                                    <p>'서울의 밤' 즐기기 좋은 루프탑 호텔 TOP5</p>
+                                    <span>스페셜</span>
+                                </div><!-- .swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="img/theme4.png" alt="" />
+                                    </figure>
+                                    <p>여기가 거기라고? 드라마·예능 속 국내 호텔 5</p>
+                                    <span>스페셜</span>
+                                </div><!-- .swiper-slide end -->
+                            </div><!-- .swiper-wrapper end -->
+                        </div><!-- .swiper bestitem end -->
+                    </div><!-- .list end -->
+                    <div class="theme-next"></div>
+                    <div class="theme-prev"></div>
+                </sectiona><!-- .theme end -->
+            </section><!-- .all  end-->
+        </div><!-- .main inner end -->
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,398 @@
+@charset "utf-8";
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
+* {
+    font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1;
+    font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+    max-width: 390px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header .inner {
+    width: 390px;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .inner h1 {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+}
+
+header .inner .menu_icon {
+    position: absolute;
+    top: 65%;
+    right: 18px;
+}
+
+header .inner h1 a img {
+    width: 45px;
+    height: 22px;
+}
+
+header .inner .menu_icon img {
+    width: 19px;
+    height: 19px;
+}
+
+main .inner {
+    width: 100%;
+    padding: 0 20px;
+    background-color: aliceblue;
+    position: relative;
+    top: 365px;
+    border-radius: 20px 20px 0 0;
+}
+
+#main_visual {
+    position: fixed;
+    width: 390px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#main_visual figure {
+    width: 100%;
+    height: 365px;
+}
+
+#main_visual figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main_visual .btn button {
+    /* 버튼 공통으로 트렌지션 */
+    width: 32px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 0;
+    background-color: #fff;
+}
+
+#main_visual .btn .prev {
+    border-radius: 0 16px 16px 0;
+}
+
+#main_visual .btn .prev img {
+    width: 5px;
+    height: 8px;
+}
+
+#main_visual .btn .next {
+    left: auto;
+    /* left랑 right동시에 못 잡으니. */
+    right: 0;
+    border-radius: 16px 0 0 16px;
+}
+
+#main_visual .btn .next img {
+    width: 5px;
+    height: 8px;
+}
+
+#main_visual .numbtn {
+    display: flex;
+    position: absolute;
+    right: 16px;
+    bottom: 36px;
+    padding: 5px;
+    margin: -5px;
+}
+
+#main_visual .numbtn .numlist {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.24);
+    color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    border-radius: 20px;
+    padding: 3px 6px;
+    backdrop-filter: blur(8px);
+}
+
+#main_visual .numbtn .numlist .num {
+    font-size: 13px;
+    font-weight: 400;
+    margin-right: 4px;
+}
+
+#main_visual .numbtn .numlist img {
+    width: 12px;
+    height: 12px;
+}
+
+.all {
+    background-color: aliceblue;
+    border-radius: 20px 20px 0 0;
+}
+
+.all .board .list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.all .board .list .item figure {
+    width: 72px;
+    height: 72px;
+}
+
+.all .board .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.all .board .list .item div p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.best {
+    width: 89.74%;
+    margin-top: 30px;
+}
+
+.best .list div p {
+    margin-bottom: 5px;
+    font-size: 14px;
+
+}
+
+.best .list div h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.best .list .bestitem figure {
+    width: 170px;
+    height: 90px;
+}
+
+.best .list .bestitem figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.best .swiper-button-prev::after,
+.best .swiper-button-next::after {
+    display: none;
+}
+
+.best .swiper-button-next {
+    width: 24px;
+    height: 24px;
+    background: url(../img/right.png) center center / 100% no-repeat;
+    top: 120px;
+    right: 25px;
+    margin-top: 0;
+}
+
+.best .swiper-button-prev {
+    width: 24px;
+    height: 24px;
+    background: url(../img/left.png) center center / 100% no-repeat;
+    top: 120px;
+    left: 318px;
+    margin-top: 0;
+}
+
+.hotel {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.hotel div {
+    margin-bottom: 15px;
+}
+
+.hotel div p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.hotel div h4 {
+    font-size: 20px;
+}
+
+.hotel>span {
+    display: block;
+    width: 53px;
+    height: 31px;
+    background-color: #2175FF;
+    color: white;
+    font-size: 13px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 31px;
+    margin-bottom: 15px;
+}
+
+.hotel .item {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.hotel .item figure {
+    width: 88px;
+    height: 112px;
+}
+
+.hotel .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel .item>img:nth-child(2) {
+    width: 16px;
+    height: 20px;
+    object-fit: cover;
+    position: absolute;
+    top: 8px;
+    left: 65px;
+}
+
+.hotel .item div {
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.hotel .item div h4 {
+    font-size: 14px;
+    margin: 4px;
+}
+
+.hotel .item div p img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.hotel .item div p {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.hotel .item div p:nth-of-type(1) span {
+    margin: 0 5px;
+}
+
+.hotel .item div p:nth-of-type(2) span {
+    color: #2175FF;
+}
+
+.hotel .item div p:nth-of-type(2) span:nth-of-type(2) {
+    margin: 0 5px;
+    color: #333;
+}
+
+.hotel .item div strong {
+    margin-top: 8px;
+    color: #2175FF;
+}
+
+.hotel>p {
+    font-size: 13px;
+}
+
+.theme {
+    width: 89.74%;
+    margin: 30px auto;
+    position: relative;
+}
+
+.theme .list {
+    width: 100%;
+}
+
+.theme .list div p {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.theme .list div h4 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.theme .list figure {
+    width: 169px;
+    height: 215px;
+}
+
+.theme .list figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.theme .swiper-button-prev::after,
+.theme .swiper-button-next::after {
+    display: none;
+}
+
+.theme .theme-next {
+    width: 24px;
+    height: 24px;
+    background: url(../img/right.png) center center / 100% no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+}
+
+.theme .theme-prev {
+    width: 24px;
+    height: 24px;
+    background: url(../img/left.png) center center / 100% no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+}
