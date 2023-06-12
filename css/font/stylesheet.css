@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Regular.woff2') format('woff2'),
+        url('font/Inter-Regular.woff') format('woff'),
+        url('font/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Black.woff2') format('woff2'),
+        url('font/Inter-Black.woff') format('woff'),
+        url('font/Inter-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Bold.woff2') format('woff2'),
+        url('font/Inter-Bold.woff') format('woff'),
+        url('font/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Medium.woff2') format('woff2'),
+        url('font/Inter-Medium.woff') format('woff'),
+        url('font/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Light.woff2') format('woff2'),
+        url('Inter-Light.woff') format('woff'),
+        url('Inter-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Thin.woff2') format('woff2'),
+        url('font/Inter-Thin.woff') format('woff'),
+        url('font/Inter-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('font/SpoqaHanSansNeo-Bold.eot');
+    src: url('font/SpoqaHanSansNeo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/SpoqaHanSansNeo-Bold.woff2') format('woff2'),
+        url('font/SpoqaHanSansNeo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('font/SpoqaHanSansNeo-Light.eot');
+    src: url('font/SpoqaHanSansNeo-Light.eot?#iefix') format('embedded-opentype'),
+        url('font/SpoqaHanSansNeo-Light.woff2') format('woff2'),
+        url('font/SpoqaHanSansNeo-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('font/SpoqaHanSansNeo-Medium.eot');
+    src: url('font/SpoqaHanSansNeo-Medium.eot?#iefix') format('embedded-opentype'),
+        url('font/SpoqaHanSansNeo-Medium.woff2') format('woff2'),
+        url('font/SpoqaHanSansNeo-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('font/SpoqaHanSansNeo-Regular.eot');
+    src: url('font/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/SpoqaHanSansNeo-Regular.woff2') format('woff2'),
+        url('font/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('font/SpoqaHanSansNeo-Thin.eot');
+    src: url('font/SpoqaHanSansNeo-Thin.eot?#iefix') format('embedded-opentype'),
+        url('font/SpoqaHanSansNeo-Thin.woff2') format('woff2'),
+        url('font/SpoqaHanSansNeo-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
