@@ -17,18 +17,18 @@
   <script>
     window.onload = function () {
 
-      $(function(){
+      $(function () {
         let menu = $('.gnb li');
-        menu.mouseenter(function(){
+        menu.mouseenter(function () {
           console.log($(this).position().left)
 
           let moveLeft = $(this).position().left;
           $('.bar').stop().animate({
-            'left' : moveLeft
+            'left': moveLeft
           })
           let thisWidth = $(this).outerWidth();
           bar.css({
-            'width' : thisWidth,
+            'width': thisWidth,
           })
         })
       })
@@ -67,7 +67,7 @@
         slidesPerView: 2.5,
         spaceBetween: 20,
       });
-      
+
     }
   </script>
 </head>
