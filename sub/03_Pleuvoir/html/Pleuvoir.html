@@ -61,6 +61,7 @@
         },
         loop: false,
         loopAdditionalSlides: 1,
+
       });
 
       /* .best script*/
@@ -70,16 +71,29 @@
         grid: {
           rows: 2,
         },
+        breakpoints: {
+          414: {
+            grid: {
+              rows: 1,
+            },
+          },
+          800: {
+            grid: {
+              rows: 2,
+            },
+          },
+          1024: {
+            grid: {
+              rows: 2,
+            },
+          },
+        },
         pagination: {
           el: ".swiper-pagination",
           type: "progressbar",
         },
       });
     }
-
-
-
-
   </script>
 
 </head>
@@ -153,269 +167,273 @@
   </header>
 
   <!-- main 🟢 -->
-  <section class="main_visual">
-    <figure>
-      <img src="img/main img.jpg" alt="메인이미지" />
-    </figure>
-    <div class="mini">
-      <div>
-        <img src="img/left img.jpg" alt="왼쪽이미지" />
-      </div>
-      <div>
-        <img src="img/center img.jpg" alt="센터이미지" />
-      </div>
-      <div>
-        <img src="img/right img.jpg" alt="오른쪽이미지" />
-      </div>
-    </div><!-- .mini end -->
-  </section><!-- .main_visual end -->
-
-  <!-- product 🟢 -->
-  <section class="product">
+  <main>
     <div class="inner">
-      <!-- .new start -->
-      <div class="new_arrival">
-        <h3>New Arrival</h3>
-        <div class="swiper new">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="new_item">
-                <figure>
-                  <img src="img/new.jpg" alt="" />
-                </figure>
-              </div><!-- .new_item end -->
-            </div><!-- .swiper-slide end -->
-            <div class="swiper-slide">
-              <div class="new_item">
-                <figure>
-                  <img src="img/new1.jpg" alt="" />
-                </figure>
-              </div><!-- .new_item end -->
-            </div><!-- .swiper-slide end -->
-            <div class="swiper-slide">
-              <div class="new_item">
-                <figure>
-                  <img src="img/new2.jpg" alt="" />
-                </figure>
-              </div><!-- .new_item end -->
-            </div><!-- .swiper-slide end -->
-          </div><!-- .swiper-wrapper end -->
-        </div><!-- .swiper new end -->
-      </div><!-- .new_arrival end-->
-      <!-- .best start -->
-      <div class="best_seller">
-        <h3>Best Seller</h3>
-        <div class="bar">
-          <div class="swiper best">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs1.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs2.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs3.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs4.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs1-1.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs2-1.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs3-1.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-              <div class="swiper-slide">
-                <div class="best_item">
-                  <figure>
-                    <img src="img/bs4-1.jpg" alt="" />
-                  </figure>
-                  <div>
-                    <span>Hinoki Leather Hand Cream</span>
-                    <p>히노끼 레더 핸드크림</p>
-                    <strong>KRW 12,800</strong>
-                  </div>
-                </div><!-- .best_item end -->
-              </div><!-- .swiper-slide end -->
-            </div><!-- .swiper-wrapper end -->
-          </div><!-- .swiper best end -->
-          <div class="swiper-pagination"></div>
-        </div><!-- .bar end -->
-      </div><!-- .best_seller end -->
-    </div><!-- .list end -->
+      <section class="main_visual">
+        <figure>
+          <img src="img/main img.jpg" alt="메인이미지" />
+        </figure>
+        <div class="mini">
+          <div>
+            <img src="img/left img.jpg" alt="왼쪽이미지" />
+          </div>
+          <div>
+            <img src="img/center img.jpg" alt="센터이미지" />
+          </div>
+          <div>
+            <img src="img/right img.jpg" alt="오른쪽이미지" />
+          </div>
+        </div><!-- .mini end -->
+      </section><!-- .main_visual end -->
+
+      <!-- product 🟢 -->
+      <section class="product">
+        <div class="inner">
+          <!-- .new start -->
+          <div class="new_arrival">
+            <h3>New Arrival</h3>
+            <div class="swiper new">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="new_item">
+                    <figure>
+                      <img src="img/new.jpg" alt="" />
+                    </figure>
+                  </div><!-- .new_item end -->
+                </div><!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <div class="new_item">
+                    <figure>
+                      <img src="img/new1.jpg" alt="" />
+                    </figure>
+                  </div><!-- .new_item end -->
+                </div><!-- .swiper-slide end -->
+                <div class="swiper-slide">
+                  <div class="new_item">
+                    <figure>
+                      <img src="img/new2.jpg" alt="" />
+                    </figure>
+                  </div><!-- .new_item end -->
+                </div><!-- .swiper-slide end -->
+              </div><!-- .swiper-wrapper end -->
+            </div><!-- .swiper new end -->
+          </div><!-- .new_arrival end-->
+          <!-- .best start -->
+          <div class="best_seller">
+            <h3>Best Seller</h3>
+            <div class="bar">
+              <div class="swiper best">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs1.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs2.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs3.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs4.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs1-1.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs2-1.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs3-1.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                  <div class="swiper-slide">
+                    <div class="best_item">
+                      <figure>
+                        <img src="img/bs4-1.jpg" alt="" />
+                      </figure>
+                      <div>
+                        <span>Hinoki Leather Hand Cream</span>
+                        <p>히노끼 레더 핸드크림</p>
+                        <strong>KRW 12,800</strong>
+                      </div>
+                    </div><!-- .best_item end -->
+                  </div><!-- .swiper-slide end -->
+                </div><!-- .swiper-wrapper end -->
+              </div><!-- .swiper best end -->
+              <div class="swiper-pagination"></div>
+            </div><!-- .bar end -->
+          </div><!-- .best_seller end -->
+        </div><!-- .list end -->
     </div><!-- .inner end -->
-  </section><!-- .product end -->
+    </section><!-- .product end -->
 
-  <!-- scent 🟢 -->
-  <section class="scent">
-    <h3>scent</h3>
-    <div class="list">
-      <div class="item">
-        <figure>
-          <img src="img/floral musk.jpg" alt="" />
-        </figure>
-        <div>
-          <p>floral musk</p>
-          <span>Shop Now</span>
-        </div>
-      </div><!-- .item end -->
-      <div class="item">
-        <figure>
-          <img src="img/hinoki Leather.jpg" alt="" />
-        </figure>
-        <div>
-          <p>hinoki Leather</p>
-          <span>Shop Now</span>
-        </div>
-      </div><!-- .item end -->
-      <div class="item">
-        <figure>
-          <img src="img/morning soil.jpg" alt="" />
-        </figure>
-        <div>
-          <p>morning soil</p>
-          <span>Shop Now</span>
-        </div>
-      </div><!-- .item end -->
-  </section><!-- .scent end-->
+    <!-- scent 🟢 -->
+    <section class="scent">
+      <h3>scent</h3>
+      <div class="list">
+        <div class="item">
+          <figure>
+            <img src="img/floral musk.jpg" alt="" />
+          </figure>
+          <div>
+            <p>floral musk</p>
+            <span>Shop Now</span>
+          </div>
+        </div><!-- .item end -->
+        <div class="item">
+          <figure>
+            <img src="img/hinoki Leather.jpg" alt="" />
+          </figure>
+          <div>
+            <p>hinoki Leather</p>
+            <span>Shop Now</span>
+          </div>
+        </div><!-- .item end -->
+        <div class="item">
+          <figure>
+            <img src="img/morning soil.jpg" alt="" />
+          </figure>
+          <div>
+            <p>morning soil</p>
+            <span>Shop Now</span>
+          </div>
+        </div><!-- .item end -->
+    </section><!-- .scent end-->
 
-  <section class="care">
-    <h3>Care</h3>
-    <div class="inner">
-      <div class="item">
-        <div class="text">
-          <div>
-            <h4>Body Care</h4>
-            <p>Component</p>
-            <span>Cramide
-              Hyaluronic acid
-              BPS complexTM
-              Peptide
-              Hamamelis virginiana(witch hazel) leaf extract</span>
-            <p>Free Concept</p>
-            <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
-              Skin irritation test completed</span>
-          </div>
-        </div><!-- .text end -->
-        <div>
-          <figure>
-            <img src="img/body.png" alt="" />
-          </figure>
-        </div>
-      </div><!-- .item1 end -->
-      <div class="item">
-        <div class="text">
-          <div>
-            <h4>Body Care</h4>
-            <p>Component</p>
-            <span>Cramide
-              Hyaluronic acid
-              BPS complexTM
-              Peptide
-              Hamamelis virginiana(witch hazel) leaf extract</span>
-            <p>Free Concept</p>
-            <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
-              Skin irritation test completed</span>
-          </div>
-        </div><!-- .text end -->
-        <div>
-          <figure>
-            <img src="img/hand.png" alt="" />
-          </figure>
-        </div>
-      </div><!-- .item1 end -->
-      <div class="item">
-        <div class="text">
-          <div>
-            <h4>Lip Care</h4>
-            <p>Component</p>
-            <span>Component
-              Cramide
-              Hyaluronic acid
-              BPS complexTM
-              Peptide
-              Hamamelis virginiana(witch hazel) leaf extract</span>
-            <p>Free Concept</p>
-            <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
-              Skin irritation test completed</span>
+    <section class="care">
+      <h3>Care</h3>
+      <div class="inner">
+        <div class="item">
+          <div class="text">
+            <div>
+              <h4>Body Care</h4>
+              <p>Component</p>
+              <span>Cramide
+                Hyaluronic acid
+                BPS complexTM
+                Peptide
+                Hamamelis virginiana(witch hazel) leaf extract</span>
+              <p>Free Concept</p>
+              <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
+                Skin irritation test completed</span>
+            </div>
           </div><!-- .text end -->
-        </div>
-        <div>
-          <figure>
-            <img src="img/lip.png" alt="" />
-          </figure>
-        </div>
-      </div><!-- .item1 end -->
-    </div><!-- .inner end -->
-  </section><!-- .Care end -->
+          <div>
+            <figure>
+              <img src="img/body.png" alt="" />
+            </figure>
+          </div>
+        </div><!-- .item1 end -->
+        <div class="item">
+          <div class="text">
+            <div>
+              <h4>Body Care</h4>
+              <p>Component</p>
+              <span>Cramide
+                Hyaluronic acid
+                BPS complexTM
+                Peptide
+                Hamamelis virginiana(witch hazel) leaf extract</span>
+              <p>Free Concept</p>
+              <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
+                Skin irritation test completed</span>
+            </div>
+          </div><!-- .text end -->
+          <div>
+            <figure>
+              <img src="img/hand.png" alt="" />
+            </figure>
+          </div>
+        </div><!-- .item1 end -->
+        <div class="item">
+          <div class="text">
+            <div>
+              <h4>Lip Care</h4>
+              <p>Component</p>
+              <span>Component
+                Cramide
+                Hyaluronic acid
+                BPS complexTM
+                Peptide
+                Hamamelis virginiana(witch hazel) leaf extract</span>
+              <p>Free Concept</p>
+              <span>Silicone, Mineral oil, Dye, ParabensLilial, Cruelty-Free
+                Skin irritation test completed</span>
+            </div><!-- .text end -->
+          </div>
+          <div>
+            <figure>
+              <img src="img/lip.png" alt="" />
+            </figure>
+          </div>
+        </div><!-- .item1 end -->
+      </div><!-- .inner end -->
+    </section><!-- .Care end -->
 </body>
+</div><!-- .inner end -->
+</main>
 <footer>
   <div class="top">
     <div>
