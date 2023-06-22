@@ -43,8 +43,8 @@
 @font-face {
   font-family: 'Inter';
   src: url('font/Inter-Light.woff2') format('woff2'),
-    url('Inter-Light.woff') format('woff'),
-    url('Inter-Light.ttf') format('truetype');
+    url('font/Inter-Light.woff') format('woff'),
+    url('font/Inter-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
