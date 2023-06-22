@@ -62,25 +62,51 @@
                 mainImg.src = imgList[i]
                 mainNum.innerText = numList[i]
             }
+
             var swiper = new Swiper(".bestitem", {
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
                 slidesPerView: 2,
-                spaceBetween: 30,
+                spaceBetween: 10,
             });
 
 
             var swiper = new Swiper(".themeItem", {
                 navigation: {
-                    nextEl: ".theme-next",
-                    prevEl: ".theme-prev",
+                    nextEl: ".swiper-theme-next",
+                    prevEl: ".swiper-theme-prev",
                 },
                 slidesPerView: 2,
-                spaceBetween: 0,
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                loop: false,
+                loopAdditionalSlides: 1,
             });
 
+            var swiper = new Swiper(".familyItem", {
+                navigation: {
+                    nextEl: ".swiper-family-next",
+                    prevEl: ".swiper-family-prev",
+                },
+                slidesPerView: 5,
+                spaceBetween: 10,
+            });
+
+            let hd = document.getElementsByTagName('header')[0];
+            window.onscroll = function () {
+                let scrollBar = window.scrollY;
+                console.log(scrollBar);
+                console.log(hd.offsetTop); //0
+                if (hd.offsetTop < scrollBar) {
+                    hd.classList.add('on');
+                } else
+                    hd.classList.remove('on');
+            }//onscroll
 
         }//window.onload end
     </script>
@@ -92,10 +118,12 @@
             <h1>
                 <a href="#">
                     <img src="img/kyte logo.png" alt="kyte로고" />
+                    <img src="img/kyte logo2.png" alt="kyre로고2" />
                 </a>
             </h1>
             <div class="menu_icon">
                 <img src="img/person.png" alt="사람" />
+                <img src="img/person2.png" alt="사람" />
             </div><!-- .menu_icon end -->
         </div><!-- .inner end -->
     </header>
@@ -131,34 +159,34 @@
                         <div class="item">
                             <figure>
                                 <img src="img/board1.png" alt="" />
-                                <div>
-                                    <p>혜택 모음</p>
-                                </div>
                             </figure>
+                            <div>
+                                <p>혜택 모음</p>
+                            </div>
                         </div><!-- .item end -->
                         <div class="item">
                             <figure>
                                 <img src="img/board2.png" alt="" />
-                                <div>
-                                    <p>서울 힐링</p>
-                                </div>
                             </figure>
+                            <div>
+                                <p>서울 힐링</p>
+                            </div>
                         </div><!-- .item end -->
                         <div class="item">
                             <figure>
                                 <img src="img/board3.png" alt="" />
-                                <div>
-                                    <p>제주 쉬영갑서</p>
-                                </div>
                             </figure>
+                            <div>
+                                <p>제주 쉬영갑서</p>
+                            </div>
                         </div><!-- .item end -->
                         <div class="item">
                             <figure>
                                 <img src="img/board4.png" alt="" />
-                                <div>
-                                    <p>웰니스 강원</p>
-                                </div>
                             </figure>
+                            <div>
+                                <p>웰니스 강원</p>
+                            </div>
                         </div><!-- .item end -->
                     </div><!-- .list end -->
                 </div><!-- .board end -->
@@ -173,12 +201,12 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <figure>
-                                        <img src="img/best1.jpg" alt="" />
+                                        <img src="img/best1.png" alt="" />
                                     </figure>
                                 </div><!-- .swiper-slide end -->
                                 <div class="swiper-slide">
                                     <figure>
-                                        <img src="img/best2.jpg" alt="" />
+                                        <img src="img/best2.png" alt="" />
                                     </figure>
                                 </div><!-- .swiper-slide end -->
                                 <div class="swiper-slide">
@@ -193,10 +221,11 @@
                                 </div><!-- .swiper-slide end -->
                             </div><!-- .swiper-wrapper end -->
                         </div><!-- .swiper bestitem end -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
                     </div><!-- .list end -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </section><!-- .best end -->
+
                 <section class="hotel">
                     <div>
                         <p>고궁 야간 개장</p>
@@ -242,7 +271,7 @@
                     <p>2023. 4. 21 금 - 4. 22 토 기준 최저요금</p>
                 </section><!-- .hotel end -->
 
-                <sectiona class="theme">
+                <section class="theme">
                     <div class="list">
                         <div>
                             <p>취향을 발견해보세요</p>
@@ -251,41 +280,129 @@
                         <div class="swiper themeItem">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
+                                    <a href="#">
                                     <figure>
                                         <img src="img/theme1.png" alt="" />
                                     </figure>
+                                    </a>
                                     <div>
                                         <p>'서울의 밤' 즐기기 좋은 루프탑 호텔 TOP5</p>
                                         <span>스페셜</span>
                                     </div>
                                 </div><!-- .swiper-slide end -->
                                 <div class="swiper-slide">
-                                    <figure>
-                                        <img src="img/theme2.png" alt="" />
-                                    </figure>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="img/theme2.png" alt="" />
+                                        </figure>
+                                    </a>
                                     <p>여기가 거기라고? 드라마·예능 속 국내 호텔 5</p>
                                     <span>스페셜</span>
                                 </div><!-- .swiper-slide end -->
                                 <div class="swiper-slide">
-                                    <figure>
-                                        <img src="img/theme3.png" alt="" />
-                                    </figure>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="img/theme3.png" alt="" />
+                                        </figure>
+                                    </a>
                                     <p>'서울의 밤' 즐기기 좋은 루프탑 호텔 TOP5</p>
                                     <span>스페셜</span>
                                 </div><!-- .swiper-slide end -->
                                 <div class="swiper-slide">
-                                    <figure>
-                                        <img src="img/theme4.png" alt="" />
-                                    </figure>
+                                    <a href="#">
+                                        <figure>
+                                            <img src="img/theme4.png" alt="" />
+                                        </figure>
+                                    </a>
                                     <p>여기가 거기라고? 드라마·예능 속 국내 호텔 5</p>
                                     <span>스페셜</span>
                                 </div><!-- .swiper-slide end -->
                             </div><!-- .swiper-wrapper end -->
-                        </div><!-- .swiper bestitem end -->
+                        </div><!-- .swiper themeItem end -->
                     </div><!-- .list end -->
-                    <div class="theme-next"></div>
-                    <div class="theme-prev"></div>
-                </sectiona><!-- .theme end -->
+                    <!--                     <div class=".swiper-theme-next"></div>
+                    <div class=".swiper-theme-prev"></div> -->
+                </section><!-- .theme end -->
+
+                <section class="family">
+                    <div>
+                        <p>엄마도 아이도 만족!😊</p>
+                        <h4>가족여행 호텔 추천</h4>
+                    </div>
+                    <div class="swiper familyItem">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p>제주</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>서울</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>부산</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>강원</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>경남</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>전남</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>대구</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>강릉</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>경주</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <p>사천</p>
+                            </div>
+                        </div>
+                        <div class="swiper-family-next"></div>
+                        <div class="swiper-family-prev"></div>
+                    </div>
+                    <div class="item">
+                        <figure>
+                            <img src="img/family1.jpg" alt="" />
+                        </figure>
+                        <img src="img/save.png" alt="" />
+                        <div>
+                            <h4>에코랜드 호텔</h4>
+                            <p><img src="img/map.png" alt="" />제주시<span>|</span>한국</p>
+                            <p><img src="img/star.png" alt="" /><span>9.0</span><span>(1,081)</span></p>
+                            <strong>232,264원</strong>
+                        </div>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/family2.jpg" alt="" />
+                        </figure>
+                        <img src="img/save.png" alt="" />
+                        <div>
+                            <h4>더 스위트 호텔 제주</h4>
+                            <p><img src="img/map.png" alt="" />서귀포시<span>|</span>한국</p>
+                            <p><img src="img/star.png" alt="" /><span>8.6</span><span>(521)</span></p>
+                            <strong>187,000원</strong>
+                        </div>
+                    </div><!-- .item end -->
+                    <div class="item">
+                        <figure>
+                            <img src="img/family3.jpg" alt="" />
+                        </figure>
+                        <img src="img/save.png" alt="" />
+                        <div>
+                            <h4>서머셋제주신화월드</h4>
+                            <p><img src="img/map.png" alt="" />서귀포시<span>|</span>한국</p>
+                            <p><img src="img/star.png" alt="" /><span>9.1</span><span>(531)</span></p>
+                            <strong>193,829원</strong>
+                        </div>
+                    </div><!-- .item end -->
+                    <p>2023. 5. 4 목 - 5. 5 금 기준 최저요금</p>
+                </section><!-- .family end -->
             </section><!-- .all  end-->
         </div><!-- .main inner end -->
     </main>
