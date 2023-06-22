@@ -1,42 +1,31 @@
 @charset "utf-8";
-@import url(https;//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-@import url(https;//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+@import url('common.css');
 
-* {
-    font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+section {
+    margin-bottom: 30px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-body {
-    color: rgba(0, 0, 0, 0.8);
-    line-height: 1;
-    font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
-    max-width: 390px;
-    margin: 0 auto;
-    position: relative;
+h4 {
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 header {
-    height: 80px;
+    height: 40px;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    transition: top 0.2s, background-color 0.5s;
+}
+
+header.on {
+    top: 0;
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(7px);
+    position: fixed;
+    z-index: 99;
 }
 
 header .inner {
@@ -51,14 +40,16 @@ header .inner {
 
 header .inner h1 {
     position: absolute;
-    top: 50%;
-    left: 45%;
+    top: 0;
+    left: 53%;
+    transform: translate(-53%);
 }
 
 header .inner .menu_icon {
     position: absolute;
-    top: 65%;
-    right: 18px;
+    top: 12%;
+    right: 5%;
+    transform: translate(-5%, -12%);
 }
 
 header .inner h1 a img {
@@ -66,19 +57,49 @@ header .inner h1 a img {
     height: 22px;
 }
 
+header.on .inner h1 a img:first-child {
+    display: none;
+}
+
+header .inner h1 a img:nth-child(2) {
+    display: none;
+}
+
+header.on .inner h1 a img:nth-child(2) {
+    display: block;
+    margin-top: 5px;
+}
+
 header .inner .menu_icon img {
     width: 19px;
     height: 19px;
 }
 
+header.on .inner .menu_icon img {
+    display: none;
+}
+
+header .inner .menu_icon img:nth-child(2) {
+    display: none;
+}
+
+header.on .inner .menu_icon img:nth-child(2) {
+    display: block;
+}
+
+/* main */
+
 main .inner {
     width: 100%;
     padding: 0 20px;
-    background-color: aliceblue;
+    background-color: #FFFFFF;
+    /*색 변경 */
     position: relative;
     top: 365px;
     border-radius: 20px 20px 0 0;
 }
+
+/* main_visual */
 
 #main_visual {
     position: fixed;
@@ -86,6 +107,10 @@ main .inner {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+#main_visual:hover .btn button {
+    display: block;
 }
 
 #main_visual figure {
@@ -109,6 +134,7 @@ main .inner {
     transform: translateY(-50%);
     border: 0;
     background-color: #fff;
+    display: none;
 }
 
 #main_visual .btn .prev {
@@ -163,8 +189,14 @@ main .inner {
 }
 
 .all {
-    background-color: aliceblue;
+    background-color: #FFFFFF;
+    /* 색 변경 */
     border-radius: 20px 20px 0 0;
+}
+
+.all .board {
+    padding-top: 15px;
+    margin-bottom: 30px;
 }
 
 .all .board .list {
@@ -187,22 +219,47 @@ main .inner {
 .all .board .list .item div p {
     font-size: 12px;
     text-align: center;
+    margin-top: 8px;
 }
 
 .best {
-    width: 89.74%;
-    margin-top: 30px;
+    position: relative;
+}
+
+.best .swiper-button-next::after,
+.best .swiper-button-prev::after {
+    display: none;
+}
+
+.best .swiper-button-next::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url(../img/right.png) center center/ 100% no-repeat;
+    position: absolute;
+    top: -75%;
+    right: -10px;
+    opacity: 0.6;
+}
+
+.best .swiper-button-prev::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url(../img/left.png) center center/ 100% no-repeat;
+    position: absolute;
+    top: -75%;
+    right: -290px;
+    opacity: 0.6;
 }
 
 .best .list div p {
     margin-bottom: 5px;
     font-size: 14px;
-
 }
 
 .best .list div h4 {
     font-size: 20px;
-    margin-bottom: 30px;
 }
 
 .best .list .bestitem figure {
@@ -216,37 +273,10 @@ main .inner {
     object-fit: cover;
 }
 
-
-.best .swiper-button-prev::after,
-.best .swiper-button-next::after {
-    display: none;
-}
-
-.best .swiper-button-next {
-    width: 24px;
-    height: 24px;
-    background: url(../img/right.png) center center / 100% no-repeat;
-    top: 120px;
-    right: 25px;
-    margin-top: 0;
-}
-
-.best .swiper-button-prev {
-    width: 24px;
-    height: 24px;
-    background: url(../img/left.png) center center / 100% no-repeat;
-    top: 120px;
-    left: 318px;
-    margin-top: 0;
-}
+/* hotel */
 
 .hotel {
-    margin-top: 30px;
     width: 100%;
-}
-
-.hotel div {
-    margin-bottom: 15px;
 }
 
 .hotel div p {
@@ -275,6 +305,7 @@ main .inner {
     width: 100%;
     display: flex;
     position: relative;
+    margin-bottom: 15px;
 }
 
 .hotel .item figure {
@@ -341,24 +372,28 @@ main .inner {
 }
 
 .theme {
-    width: 89.74%;
-    margin: 30px auto;
     position: relative;
 }
 
 .theme .list {
     width: 100%;
-}
-
-.theme .list div p {
-    margin-top: 30px;
-    margin-bottom: 5px;
-    font-size: 14px;
+    margin: 0 auto;
 }
 
 .theme .list div h4 {
     font-size: 20px;
-    margin-bottom: 30px;
+}
+
+.theme .list div p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.theme .list div span {
+    display: block;
+    font: 12px;
+    color: rgb(0, 0, 0, 0.6);
 }
 
 .theme .list figure {
@@ -372,27 +407,126 @@ main .inner {
     object-fit: cover;
 }
 
-.theme .swiper-button-prev::after,
-.theme .swiper-button-next::after {
+/* .theme .swiper-theme-next::after,
+.theme .swiper-theme-prev::after {
     display: none;
 }
 
-.theme .theme-next {
+.theme .swiper-theme-next::before {
+    content: '';
     width: 24px;
     height: 24px;
-    background: url(../img/right.png) center center / 100% no-repeat;
+    background: url(../img/right.png) center center/ 100% no-repeat;
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 0;
 }
 
-.theme .theme-prev {
+.theme .swiper-theme-prev::before {
+    content: '';
     width: 24px;
     height: 24px;
-    background: url(../img/left.png) center center / 100% no-repeat;
+    background: url(../img/left.png) center center/ 100% no-repeat;
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 0;
+} */
+
+
+/* family */
+
+.family {
+    width: 100%;
+}
+
+.family div p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.family div h4 {
+    font-size: 20px;
+}
+
+.family> .familyItem p {
+    display: block;
+    width: 53px;
+    height: 31px;
+    background-color: #2175FF;
+    color: white;
+    font-size: 13px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 31px;
+    margin-bottom: 15px;
+}
+
+.family .item {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.family .item figure {
+    width: 88px;
+    height: 112px;
+}
+
+.family .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.family .item>img:nth-child(2) {
+    width: 16px;
+    height: 20px;
+    object-fit: cover;
+    position: absolute;
+    top: 8px;
+    left: 65px;
+}
+
+.family .item div {
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.family .item div h4 {
+    font-size: 14px;
+    margin: 4px;
+}
+
+.family .item div p img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.family .item div p {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.family .item div p:nth-of-type(1) span {
+    margin: 0 5px;
+}
+
+.family .item div p:nth-of-type(2) span {
+    color: #2175FF;
+}
+
+.family .item div p:nth-of-type(2) span:nth-of-type(2) {
+    margin: 0 5px;
+    color: #333;
+}
+
+.family .item div strong {
+    margin-top: 8px;
+    color: #2175FF;
+}
+
+.family>p {
+    font-size: 13px;
 }
